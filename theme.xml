@@ -23,10 +23,10 @@ gameboy hack, nintendo hack, genesis hack, entre outros, meunu personalizado, so
       </image> 
 
       <helpsystem name="help">
-         <fontPath>./_inc/fonts/Oxygen-Regular.ttf</fontPath>
-         <fontSize>0.0215</fontSize>     
-         <pos>0.18 0.942</pos>      
-         <textColor>636363</textColor>
+         <fontPath>./_inc/fonts/Roboto-Light.ttf</fontPath>
+         <fontSize>0.029</fontSize>     
+         <pos>0.015 0.942</pos>      
+         <textColor>ffffff</textColor>
          <iconColor>ffffff</iconColor>
       </helpsystem> 	  
    </view>
@@ -37,8 +37,8 @@ gameboy hack, nintendo hack, genesis hack, entre outros, meunu personalizado, so
             <type>horizontal</type>
             <pos>-0.660 -0.10</pos>
             <size>1.76 1</size>
-            <logoScale>1.12</logoScale>
-            <logoSize>0.28 0.28</logoSize>
+            <logoScale>1.1</logoScale>
+            <logoSize>0.25 0.25</logoSize>
             <color>00000000</color>
             <logoRotation>-6.5</logoRotation>
             <logoRotationOrigin>5.5 0.5</logoRotationOrigin>
@@ -48,24 +48,20 @@ gameboy hack, nintendo hack, genesis hack, entre outros, meunu personalizado, so
          </carousel>
          
          <text name="systemInfo">
-            <pos>-0.30 0.924</pos>
-            <backgroundColor>00000000</backgroundColor>
-            <color>cbcbcb</color>
+            <pos>0.11 0.51</pos>
+            <size>0.22 0.08</size>
+            <backgroundColor>00000088</backgroundColor>
+            <color>ffffff</color>
             <fontPath>./_inc/fonts/Oxygen-Regular.ttf</fontPath>
             <fontSize>0.0215</fontSize>
          </text> 
-      
+         
          <image name="mainOverlay" extra="true">
             <path>./_inc/assets/overlay.png</path>
-            <size>1 1</size>
-            <pos>0 0</pos>
+            <size>1 0.9</size>
+            <pos>0 0.1</pos>
             <origin>0 0</origin>
          </image>
-
-         <helpsystem name="help">
-            <pos>0.30 0.942</pos>      
-            <textColor>ffffff</textColor>         
-      </helpsystem>
       </view>
    </feature>
 
