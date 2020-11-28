@@ -10,7 +10,7 @@ gameboy hack, nintendo hack, genesis hack, entre outros, meunu personalizado, so
 -->
 
 <?xml version="1.0" encoding="UTF-8"?>
-<theme>
+<theme defaultView="Detailed">
    <formatVersion>4</formatVersion>
    <include>./_inc/icons/menuicons.xml</include>
 	<include>./_inc/menu/menu.xml</include>
@@ -65,139 +65,110 @@ gameboy hack, nintendo hack, genesis hack, entre outros, meunu personalizado, so
       </view>
    </feature>
 
-   <view name="detailed, video, basic">
-      <image name="logo">
-		   <pos>0.14 0.925</pos>
-		   <maxSize>0.10 0.10</maxSize>
-      </image>
-   
-	  <textlist name="gamelist">
-         <pos>0.084 0.12</pos>
-         <size>0.345 0.75</size>
-         <selectorColor>403c3e</selectorColor>
-         <selectedColor>ffffff</selectedColor>
-         <primaryColor>ffffff</primaryColor>
-         <secondaryColor>ffffff</secondaryColor>
-         <fontPath>./_inc/fonts/Oxygen-Regular.ttf</fontPath>
-         <fontSize>0.023</fontSize>
-         <alignment>left</alignment>
-		   <lineSpacing>2.075</lineSpacing>
-      </textlist>
-	  	      	  
-      <datetime name="md_releasedate">
-         <pos>0.855 0.668</pos>
-		   <color>726f70</color>
-		   <fontSize>0.023</fontSize>
-		   <fontPath>./_inc/fonts/Oxygen-Regular.ttf</fontPath>
-      </datetime>
-	  
-      <text name="md_genre">
-         <pos>0.51 0.632</pos>
-         <size>0.220 0.034</size>
-		   <fontSize>0.023</fontSize>
-		   <color>726f70</color>
-		   <fontPath>./_inc/fonts/Oxygen-Regular.ttf</fontPath>
-		   <alignment>center</alignment>
-      </text>         
+   <view name="basic,detailed,grid,video">
+    <image name="detailedOverlay" extra="true">
+       <origin>0 0</origin>
+       <pos>0 0</pos>
+       <size>1 1</size> 
+       <path>./_inc/assets/detailed.png</path>
+    </image>
 
-      <text name="md_developer">
-         <size>0.200 0.037</size>
-         <pos>0.53 0.676</pos>
-         <fontPath>./_inc/fonts/Oxygen-Regular.ttf</fontPath>
-         <fontSize>0.023</fontSize>
-         <color>726f70</color>
-         <alignment>center</alignment>
-      </text>
-	  
-      <text name="md_description">
-         <color>726f70</color>
-         <fontPath>./_inc/fonts/Oxygen-Regular.ttf</fontPath>
-         <fontSize>0.023</fontSize>
-         <size>0.43 0.19</size>
-         <pos>0.51 0.720</pos>
-      </text>       
-   </view> 
+    <video name="md_video">
+      <pos>0.76 0.408</pos>
+      <maxSize>0.46 0.436</maxSize>
+      <origin>0.5 0.5</origin>
+      <delay>0.8</delay>
+      <showSnapshotNoVideo>true</showSnapshotNoVideo>
+      <showSnapshotDelay>true</showSnapshotDelay>
+      <loops>1</loops>
+      <roundCorners>0.02</roundCorners>
+    </video>
+    <text name="md_lbl_genre, md_genre, md_lbl_rating, md_lbl_developer, md_developer, md_lbl_publisher, md_publisher, md_lbl_lastplayed, md_lbl_playcount, md_playcount, md_lbl_players, md_players, md_lbl_releasedate">
+      <color>969696</color>
+      <forceUppercase>0</forceUppercase>
+      <fontPath>./_inc/fonts/Roboto-Light.ttf</fontPath>
+      <fontSize>0.023</fontSize>
+    </text>
+    <text name="md_lbl_rating, md_lbl_publisher, md_publisher, md_lbl_lastplayed, md_lbl_playcount, md_playcount, md_lbl_releasedate, md_lbl_genre, md_lbl_developer">
+      <pos>1 1</pos>
+    </text>
+    <datetime name="md_lastplayed, md_releasedate">
+      <color>969696</color>
+      <forceUppercase>0</forceUppercase>
+      <fontPath>./_inc/fonts/Roboto-Light.ttf</fontPath>
+      <fontSize>0.023</fontSize>
+    </datetime>
 
-   <view name="basic">
-      <image name="basicOverlay" extra="true">
-         <origin>0 0</origin>
-         <pos>0 0</pos>
-         <size>1 1</size> 
-         <path>./_inc/assets/basic.png</path>
-      </image>  
+    <text name="md_lbl_players">
+      <pos>0.9 0.645</pos>
+      <size>0.09 0</size>
+    </text>
+    <text name="md_players">
+      <color>EFEFFF</color>
+      <pos>0.965 0.645</pos>
+      <size>0.02 0</size>
+    </text>
+
+    <text name="md_lbl_releasedate">
+      <color>969696</color>
+      <pos>0.53 0.645</pos>
+      <size>0.2 0</size>
+    </text>
+    <datetime name="md_releasedate">
+      <color>EFEFFF</color>
+      <pos>0.63 0.645</pos>
+      <size>0 0.033</size>
+    </datetime>
+
+    <text name="md_description">
+      <pos>0.530 0.7</pos>
+      <size>0.46 0.16</size>
+      <color>969696</color>
+      <forceUppercase>0</forceUppercase>
+      <fontPath>./_inc/fonts/Roboto-Light.ttf</fontPath>
+      <fontSize>0.023</fontSize>
+    </text>
+
+    <text name="md_developer">
+      <color>EFEFFF</color>
+      <pos>0.53 0.86</pos>
+      <size>0.30 0.05</size>
+      <alignment>left</alignment>
+      <fontSize>0.025</fontSize>
+    </text>
+    <rating name="md_rating">
+      <pos>0.88 0.87</pos>
+      <size>0.05 0.03</size>
+      <color>FFFF00</color>
+      <unfilledColor>FFFFFF</unfilledColor>
+    </rating>
+
+    <textlist name="gamelist">
+      <selectorColor>1c1c1c</selectorColor>
+      <selectedColor>8b0000</selectedColor>
+      <primaryColor>969696</primaryColor>
+      <secondaryColor>808080</secondaryColor>
+      <fontPath>./_inc/fonts/Roboto-Light.ttf</fontPath>
+      <forceUppercase>1</forceUppercase>
+      <pos>0.021 0.18</pos>
+      <size>0.489 0.73</size>
+      <alignment>left</alignment>
+      <horizontalMargin>0.00</horizontalMargin>
+      <fontSize>0.03</fontSize>
+      <horizontalMargin>0.005</horizontalMargin>
+    </textlist>
+
+    <image name="logo">
+      <pos>0 0</pos>
+      <maxSize>0 0</maxSize>
+    </image>
+
+    <image name="ext_systemlogo" extra="true">
+      <path>./${system.theme}/_inc/logo.png</path>
+      <path>./${system.theme}/_inc/logo.svg</path>
+      <pos>0.5 0.074</pos>
+      <maxSize>0.3 0.120</maxSize>
+      <origin>0.5 0.5</origin>
+    </image>
    </view>
-
-   <view name="detailed">
-      <image name="detailedOverlay" extra="true">
-         <origin>0 0</origin>
-         <pos>0 0</pos>
-         <size>1 1</size> 
-         <path>./_inc/assets/detailed.png</path>
-      </image>
-
-      <image name="md_image">
-         <pos>0.72 0.335</pos>
-         <maxSize>0.42 0.42</maxSize>
-         <origin>0.5 0.5</origin>
-      </image>  
-   </view>
-
-   <view name="video">
-      <image name="videodOverlay" extra="true">
-         <origin>0 0</origin>
-         <pos>0 0</pos>
-         <size>1 1</size> 
-         <path>./_inc/assets/detailed.png</path>
-      </image>
-
-      <video name="md_video">
-         <origin>0.5 0.5</origin>
-         <pos>0.72 0.335</pos>
-         <maxSize>0.42 0.42</maxSize>
-        <!-- <default>./_inc/videos/static.mp4</default>-->
-         <delay>0.1</delay>
-         <showSnapshotNoVideo>true</showSnapshotNoVideo>
-			<showSnapshotDelay>false</showSnapshotDelay>
-      </video> 
-   </view>
-   
-   <view name="grid">
-	   <image name="gridOverlay" extra="true">
-         <path>./_inc/assets/grid.png</path>
-         <size>1 1</size>
-         <pos>0 0</pos>
-         <origin>0 0</origin>
-      </image>
-
-      <image name="logo">
-		   <pos>0.14 0.925</pos>
-		   <maxSize>0.10 0.10</maxSize>
-      </image>
-	      	
-      <imagegrid name="gamegrid">
-			<pos>0.1 0.13</pos>
-			<size>0.9 0.65</size>
-			<margin>-0 0</margin>
-		</imagegrid>
-
-		<gridtile name="default">
-			<size>0.20 0.33</size>
-			<backgroundImage>./_inc/images/default_grid.png</backgroundImage>
-			<backgroundColor>42424200</backgroundColor>
-		</gridtile>
-
-		<gridtile name="selected">
-			<size>0.25 0.40</size>
-			<backgroundImage>./_inc/images/default_grid.png</backgroundImage>
-			<backgroundColor>42424200</backgroundColor>
-		</gridtile>		
-
-      <text name="md_name">
-         <pos>0.1 0.82</pos>
-         <fontSize>0.04</fontSize>
-		   <color>858585</color>
-		   <fontPath>./_inc/fonts/Oxygen-Regular.ttf</fontPath>
-		   <alignment>center</alignment>
-		</text>
-    </view>
 </theme>
